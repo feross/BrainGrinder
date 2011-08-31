@@ -1,0 +1,457 @@
+/*  HTML5 ✰ Boilerplate  */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+table { border-collapse: collapse; border-spacing: 0; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+input, select { vertical-align: middle; }
+
+body { font:13px/1.231 sans-serif; *font-size:small; } 
+select, input, textarea, button { font:99% sans-serif; }
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+html { overflow: hidden; }
+a:hover, a:active { outline: none; }
+ul, ol { margin-left: 2em; }
+ol { list-style-type: decimal; }
+nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
+small { font-size: 85%; }
+strong, th { font-weight: bold; }
+td { vertical-align: top; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 15px; }
+textarea { overflow: auto; }
+.ie6 legend, .ie7 legend { margin-left: -7px; } 
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+label, input[type="button"], input[type="submit"], input[type="image"], button, .pointer { cursor: pointer; }
+button, input, select, textarea { margin: 0; }
+input:valid, textarea:valid   {  }
+input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; }
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+
+button {  width: auto; overflow: visible; }
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+body, select, input, textarea {  color: #444; }
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+a, a:active, a:visited { color: #fff; text-decoration: none; border-bottom: 1px dotted #fff; }
+a:hover { color: #D10000; }
+
+
+
+/* - http://www.webdesignerwall.com/demo/css-buttons.html - */
+/* button 
+---------------------------------------------- */
+.button {
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	margin: 0 2px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover {
+	text-decoration: none;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+ 
+.bigrounded {
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+}
+.medium {
+	font-size: 12px;
+	padding: .4em 1.5em .42em;
+}
+.small {
+	font-size: 11px;
+	padding: .2em 1em .275em;
+}
+ 
+/* color styles 
+---------------------------------------------- */
+ 
+/* black */
+.black {
+/*  color: #d7d7d7;*/
+    color: #fff;
+	border: solid 1px #333;
+	background: #333;
+	background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#000));
+	background: -moz-linear-gradient(top,  #666,  #000);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#000000');
+}
+.black:hover {
+	background: #000;
+	background: -webkit-gradient(linear, left top, left bottom, from(#444), to(#000));
+	background: -moz-linear-gradient(top,  #444,  #000);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#444444', endColorstr='#000000');
+}
+.black:active {
+	color: #666;
+	background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#444));
+	background: -moz-linear-gradient(top,  #000,  #444);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#666666');
+}
+
+
+
+
+
+
+
+
+
+
+/**
+ * Primary styles
+ *
+ * Author: Feross Aboukhadijeh
+ */
+
+html {
+    background-color: rgb(0,130,217);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, rgb(24,41,69)),
+        color-stop(1, rgb(0,130,217))
+    );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        rgb(24,41,69) 0%,
+        rgb(0,130,217) 100%
+    );
+
+/*    background: #080808 url('http://instant.fm/images/bg2.jpg') no-repeat fixed center top;*/
+/*    background: #000 url('../img/bg2.png') top left repeat;*/
+    height: 100%;
+    
+}
+
+#logo {
+    background: transparent url('../img/logo.png') top left no-repeat;
+    float: left;
+    height: 40px;
+    width: 631px;
+}
+
+#header {
+    color: #fff;
+    margin: 20px auto 40px auto;
+    padding: 0 20px;
+    position: relative;
+    text-align: right;
+}
+
+#footer {
+    color: #fff;
+    font-size: 14px;
+    padding-top: 345px;
+    text-align: center;
+}
+
+.flashcardWrapper { position: relative; margin: 0 auto; width: 240px; }
+
+.flashcard {
+    color: #1D1916;
+    cursor: pointer;
+    height: 320px;
+	position: absolute;
+	text-align: center;
+	-webkit-perspective: 600;
+    width: 240px;
+}
+
+/* -- http://css3playground.com/flip-card.php -- */
+/* -- make sure to declare a default for every property that you want animated -- */
+/* -- general styles, including Y axis rotation -- */
+.flashcard .front, .flashcard .back {
+    cursor: pointer;
+    float: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: inherit;
+	height: inherit;
+    
+	
+	border: 5px solid #ccc;
+	-webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+	background: #F4EED9;
+	text-align: center;
+	
+	/* -- transition is the magic sauce for animation -- */
+	transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+}
+.flashcard .front {
+	z-index: 900;
+
+	box-shadow: 0 5px 15px rgba(0,0,0,0.9);
+	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+	
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: scale(1, 1);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+}
+.flashcard.flip .front {
+	z-index: 900;
+	border-color: #eee;
+
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: scale(-1, 1);
+	
+	box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+}
+
+.flashcard .back {
+	z-index: 800;
+	
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: scale(-1, 1);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+}
+
+.flashcard.flip .back {
+	z-index: 1000;
+	
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: scale(1, 1);
+	box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+}
+
+.language {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.word {
+    font-family: Cambria, "Hoefler Text", Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    position: absolute;
+    width: 240px;
+    top: 45%;
+}
+
+/* Some languages need larger fonts to look good, imo */
+.zh-CN, .ar {
+    font-size: 36px;
+}
+
+#keys {
+    position: absolute;
+    bottom: 50px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+#keys div {
+    color: #fff;
+}
+
+#keys .fblike {
+    position: relative;
+    top: 30px;
+}
+
+dl, #keys div { display: inline-block; font-size: 16px; margin: 0 40px 20px 0; }
+
+dt, dd {
+    display: inline-block;
+}
+
+dt {
+    background: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 3px solid #fff;
+    color: #444;
+    padding: 5px 10px;
+}
+
+dd {
+    color: #fff;
+    margin-left: 10px;
+}
+
+.space {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+#newDeckText { color: #fff; font-size: 16px; margin: 0 auto; }
+
+#newDeckText small { display: block; font-size: 10px; margin: 15px 0 5px 0; }
+
+#newDeckForm { text-align: center; }
+
+textarea {
+    background-image:
+        -webkit-gradient(
+            linear,
+            0% 0%,
+            0% 15%,
+            from(#efefef),
+            to(#fff)
+        );
+    background-image: 
+        -moz-linear-gradient(
+            center top,
+            #efefef 0%,
+            #fff 100%
+        );
+    
+    border: 1px solid #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    
+    -moz-box-shadow: inset 0 2px 2px #EFEFEF;
+    -webkit-box-shadow: inset 0 2px 2px #EFEFEF;
+    box-shadow: inset 0 2px 2px #EFEFEF;
+    
+    display: inline-block;
+    font-size: 20px;
+    padding: 5px 4px;
+    height: 300px;
+    width: 200px;
+}
+
+#newDeckForm input {
+    margin-top: 10px;
+}
+
+.callout-sample {
+    background: transparent url('../img/callout-sample.png') top left no-repeat;
+    height: 75px;
+    width: 300px;
+    position: absolute;
+    left: -320px;
+    top: 50px;
+}
+
+.callout-new {
+    background: transparent url('../img/callout-new.png') top left no-repeat;
+    float: right;
+    height: 75px;
+    width: 260px;
+    position: absolute;
+    right: 60px; 
+    top: 50px;
+}
+
+
+
+
+
+
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.hidden { display: none; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+@media all and (orientation:portrait) {
+
+}
+
+@media all and (orientation:landscape) {
+
+}
+
+@media screen and (max-device-width: 480px) {
+
+  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+}
+
+
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important; } 
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
+

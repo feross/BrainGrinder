@@ -1,0 +1,129 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Brain Grinder - Instant Foreign Language Flashcards</title>
+  <meta name="description" content="Automatically and instantly create foreign language flashcards for studying! 100s of languages!">
+  <meta name="author" content="Feross Aboukhadijeh">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css?v=10">
+  <script src="js/libs/modernizr-1.7.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="container">
+    <header class="clearfix" id="header">
+      <div class="ir" id="logo">Brain Grinder - Instant Foreign Language Flashcards</div>
+      
+      <div class="callout-new"></div>
+      <button class="black bigrounded button" href="#newDeckLink" id="newDeckLink">New Flashcard Set</button>
+    </header>
+
+    <form id="newDeckForm" style="display: none;">
+      <div id="newDeckText">
+        I want to learn the following
+  <select name="from"><option  value="af">Afrikaans</option><option  value="sq">Albanian</option><option  value="ar">Arabic</option><option  value="hy">Armenian</option><option  value="az">Azerbaijani</option><option  value="eu">Basque</option><option  value="be">Belarusian</option><option  value="bg">Bulgarian</option><option  value="ca">Catalan</option><option  value="zh-CN">Chinese</option><option  value="hr">Croatian</option><option  value="cs">Czech</option><option  value="da">Danish</option><option  value="nl">Dutch</option><option  selected value="en">English</option><option  value="et">Estonian</option><option  value="tl">Filipino</option><option  value="fi">Finnish</option><option  value="fr">French</option><option  value="gl">Galician</option><option  value="ka">Georgian</option><option  value="de">German</option><option  value="el">Greek</option><option  value="ht">Haitian Creole</option><option  value="iw">Hebrew</option><option  value="hi">Hindi</option><option  value="hu">Hungarian</option><option  value="is">Icelandic</option><option  value="id">Indonesian</option><option  value="ga">Irish</option><option  value="it">Italian</option><option  value="ja">Japanese</option><option  value="ko">Korean</option><option  value="la">Latin</option><option  value="lv">Latvian</option><option  value="lt">Lithuanian</option><option  value="mk">Macedonian</option><option  value="ms">Malay</option><option  value="mt">Maltese</option><option  value="no">Norwegian</option><option  value="fa">Persian</option><option  value="pl">Polish</option><option  value="pt">Portuguese</option><option  value="ro">Romanian</option><option  value="ru">Russian</option><option  value="sr">Serbian</option><option  value="sk">Slovak</option><option  value="sl">Slovenian</option><option  value="es">Spanish</option><option  value="sw">Swahili</option><option  value="sv">Swedish</option><option  value="th">Thai</option><option  value="tr">Turkish</option><option  value="uk">Ukrainian</option><option  value="ur">Urdu</option><option  value="vi">Vietnamese</option><option  value="cy">Welsh</option><option  value="yi">Yiddish</option></select> words in
+  <select name="to"><option  value="af">Afrikaans</option><option  value="sq">Albanian</option><option  selected value="ar">Arabic</option><option  value="hy">Armenian</option><option  value="az">Azerbaijani</option><option  value="eu">Basque</option><option  value="be">Belarusian</option><option  value="bg">Bulgarian</option><option  value="ca">Catalan</option><option  value="zh-CN">Chinese</option><option  value="hr">Croatian</option><option  value="cs">Czech</option><option  value="da">Danish</option><option  value="nl">Dutch</option><option  value="en">English</option><option  value="et">Estonian</option><option  value="tl">Filipino</option><option  value="fi">Finnish</option><option  value="fr">French</option><option  value="gl">Galician</option><option  value="ka">Georgian</option><option  value="de">German</option><option  value="el">Greek</option><option  value="ht">Haitian Creole</option><option  value="iw">Hebrew</option><option  value="hi">Hindi</option><option  value="hu">Hungarian</option><option  value="is">Icelandic</option><option  value="id">Indonesian</option><option  value="ga">Irish</option><option  value="it">Italian</option><option  value="ja">Japanese</option><option  value="ko">Korean</option><option  value="la">Latin</option><option  value="lv">Latvian</option><option  value="lt">Lithuanian</option><option  value="mk">Macedonian</option><option  value="ms">Malay</option><option  value="mt">Maltese</option><option  value="no">Norwegian</option><option  value="fa">Persian</option><option  value="pl">Polish</option><option  value="pt">Portuguese</option><option  value="ro">Romanian</option><option  value="ru">Russian</option><option  value="sr">Serbian</option><option  value="sk">Slovak</option><option  value="sl">Slovenian</option><option  value="es">Spanish</option><option  value="sw">Swahili</option><option  value="sv">Swedish</option><option  value="th">Thai</option><option  value="tr">Turkish</option><option  value="uk">Ukrainian</option><option  value="ur">Urdu</option><option  value="vi">Vietnamese</option><option  value="cy">Welsh</option><option  value="yi">Yiddish</option></select>.<br>
+      <small>Put each word on a seperate line.</small>
+      </div>
+      <p><textarea rows="8" cols="40"></textarea></p>
+
+      <p><input class="black bigrounded button" type="submit" value="Create New Set"></p>
+    </form>
+
+    <div class="clearfix" id="main" role="main">
+
+    </div>
+    <footer id="footer">
+      Loading...
+    </footer>
+    
+    <section id="keys">
+      <dl>
+        <dt class="space pointer">space</dt>
+        <dd>= Flip Card</dd>
+      </dl>
+      <dl>
+        <dt class="leftArr pointer">&larr;</dt>
+        <dt class="rightArr pointer">&rarr;</dt>
+        <dd>= Navigate Cards</dd>
+      </dl>
+      
+      <div class="fblike">
+        <fb:like href="http://braingrinder.com" layout="box_count" show_faces="false" width="50"></fb:like>
+      </div>
+      
+      <div class="me">
+        Built by <a href="http://www.feross.org/">Feross</a>.
+      </div>
+    </section>
+  </div> 
+  
+  
+  <script id="flashcardTemplate" type="text/x-jquery-tmpl">
+    <div class="flashcardWrapper">
+      {{if help && i == 0}}
+        <div class="callout-sample"></div>
+      {{/if}}
+      <div class="flashcard">
+        <div class="front">
+          <div class="language">${data.from}</div>
+          <div class="word ${data.fromCode}">${data.cards[i][0]}</div>
+        </div>
+        <div class="back">
+          <div class="language">${data.to}</div>
+          <div class="word ${data.toCode}">${data.cards[i][1] || 'No translation!'}</div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.5.1.min.js">\x3C/script>')</script>
+
+  <script src="js/plugins.js"></script>
+  <script src="js/mylibs/jquery.tmpl.min.js"></script>
+  <script src="js/mylibs/jquery.hotkeys.js"></script>
+  <script src="js/mylibs/jquery.quickflip.min.js"></script>
+  <script src="js/mylibs/jquery.touchwipe.min.js"></script>
+  <script src="js/mylibs/soundmanager2-nodebug-jsmin.js"></script>
+  <script src="js/mylibs/sha1-min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+
+  <script>
+    var _gaq=[['_setAccount','UA-3898076-12'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  
+  <!-- Start of StatCounter Code -->
+  <script type="text/javascript">
+  var sc_project=6691913; 
+  var sc_invisible=1; 
+  var sc_security="6afd557a"; 
+  </script>
+  <script type="text/javascript"
+  src="http://www.statcounter.com/counter/counter.js"></script>
+  <noscript><div class="statcounter"><a title="hits counter"
+  href="http://statcounter.com/free-hit-counter/"
+  target="_blank"><img class="statcounter"
+  src="http://c.statcounter.com/6691913/0/6afd557a/1/"
+  alt="hits counter"></a></div></noscript>
+  <!-- End of StatCounter Code -->
+
+</body>
+</html>
