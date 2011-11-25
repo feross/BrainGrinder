@@ -33,7 +33,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 input, select { vertical-align: middle; }
 
-body { font:13px/1.231 sans-serif; *font-size:small; } 
+body { font:13px/1.231 sans-serif; *font-size:small; }
 select, input, textarea, button { font:99% sans-serif; }
 pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
@@ -52,7 +52,7 @@ sub { bottom: -0.25em; }
 
 pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 15px; }
 textarea { overflow: auto; }
-.ie6 legend, .ie7 legend { margin-left: -7px; } 
+.ie6 legend, .ie7 legend { margin-left: -7px; }
 input[type="radio"] { vertical-align: text-bottom; }
 input[type="checkbox"] { vertical-align: bottom; }
 .ie7 input[type="checkbox"] { vertical-align: baseline; }
@@ -78,7 +78,7 @@ a:hover { color: #D10000; }
 
 
 /* - http://www.webdesignerwall.com/demo/css-buttons.html - */
-/* button 
+/* button
 ---------------------------------------------- */
 .button {
 	display: inline-block;
@@ -93,7 +93,7 @@ a:hover { color: #D10000; }
 	font: 14px/100% Arial, Helvetica, sans-serif;
 	padding: .5em 2em .55em;
 	text-shadow: 0 1px 1px rgba(0,0,0,.3);
-	-webkit-border-radius: .5em; 
+	-webkit-border-radius: .5em;
 	-moz-border-radius: .5em;
 	border-radius: .5em;
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
@@ -107,7 +107,7 @@ a:hover { color: #D10000; }
 	position: relative;
 	top: 1px;
 }
- 
+
 .bigrounded {
 	-webkit-border-radius: 2em;
 	-moz-border-radius: 2em;
@@ -121,10 +121,10 @@ a:hover { color: #D10000; }
 	font-size: 11px;
 	padding: .2em 1em .275em;
 }
- 
-/* color styles 
+
+/* color styles
 ---------------------------------------------- */
- 
+
 /* black */
 .black {
 /*  color: #d7d7d7;*/
@@ -181,7 +181,7 @@ html {
 /*    background: #080808 url('http://instant.fm/images/bg2.jpg') no-repeat fixed center top;*/
 /*    background: #000 url('../img/bg2.png') top left repeat;*/
     height: 100%;
-    
+
 }
 
 #logo {
@@ -194,7 +194,7 @@ html {
 #header {
     color: #fff;
     margin: 20px auto 40px auto;
-    padding: 0 20px;
+    padding: 0 140px 0 20px;
     position: relative;
     text-align: right;
 }
@@ -229,16 +229,16 @@ html {
 	left: 0;
 	width: inherit;
 	height: inherit;
-    
-	
+
+
 	border: 5px solid #ccc;
 	-webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    
+
 	background: #F4EED9;
 	text-align: center;
-	
+
 	/* -- transition is the magic sauce for animation -- */
 	transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
@@ -250,7 +250,7 @@ html {
 	box-shadow: 0 5px 15px rgba(0,0,0,0.9);
 	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
 	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
-	
+
 	-webkit-transform: rotateY(0deg);
 	-moz-transform: scale(1, 1);
 	-webkit-transform-style: preserve-3d;
@@ -262,7 +262,7 @@ html {
 
 	-webkit-transform: rotateY(180deg);
 	-moz-transform: scale(-1, 1);
-	
+
 	box-shadow: 0 15px 50px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
 	-webkit-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
@@ -270,7 +270,7 @@ html {
 
 .flashcard .back {
 	z-index: 800;
-	
+
 	-webkit-transform: rotateY(-180deg);
 	-moz-transform: scale(-1, 1);
 	-webkit-transform-style: preserve-3d;
@@ -279,7 +279,7 @@ html {
 
 .flashcard.flip .back {
 	z-index: 1000;
-	
+
 	-webkit-transform: rotateY(0deg);
 	-moz-transform: scale(1, 1);
 	box-shadow: 0 15px 50px rgba(0,0,0,0.2);
@@ -364,22 +364,22 @@ textarea {
             from(#efefef),
             to(#fff)
         );
-    background-image: 
+    background-image:
         -moz-linear-gradient(
             center top,
             #efefef 0%,
             #fff 100%
         );
-    
+
     border: 1px solid #ccc;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    
+
     -moz-box-shadow: inset 0 2px 2px #EFEFEF;
     -webkit-box-shadow: inset 0 2px 2px #EFEFEF;
     box-shadow: inset 0 2px 2px #EFEFEF;
-    
+
     display: inline-block;
     font-size: 20px;
     padding: 5px 4px;
@@ -406,7 +406,7 @@ textarea {
     height: 75px;
     width: 260px;
     position: absolute;
-    right: 60px; 
+    right: 160px;
     top: 50px;
 }
 
@@ -442,11 +442,11 @@ textarea {
 
 @media print {
   * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
-  -ms-filter: none !important; } 
+  -ms-filter: none !important; }
   a, a:visited { color: #444 !important; text-decoration: underline; }
   a[href]:after { content: " (" attr(href) ")"; }
   abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
   pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
   thead { display: table-header-group; }
   tr, img { page-break-inside: avoid; }

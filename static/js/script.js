@@ -24,7 +24,7 @@ var deck,
 $(function() {
     deck = new Deck();
     deck.setup();
-    
+
     setup();
 });
 
@@ -38,7 +38,7 @@ var Deck = function(data) {
     this.i; // current index in the deck
     this.isFrontSideUp = true;
     this.cardTransiton = 250;
-    
+
     this.setup = function() {
         this.i = 0;
         $('#main').empty();
@@ -49,7 +49,7 @@ var Deck = function(data) {
         deck.sayCurrentCard();
         $('#footer').text((this.i+1)+' of '+this.data.cards.length);
     };
-    
+
     this.loadCard = function(i) {
         var card = $('#flashcardTemplate')
             .tmpl({
@@ -59,55 +59,55 @@ var Deck = function(data) {
             });
         return card;
     };
-    
+
     this.next = function() {
         if (this.i >= this.data.cards.length - 1) {
             return;
         }
-        
+
         var cardOffset = ($(window).width() / 2) + 150;
         $('.flashcardWrapper')
             .animate({left: -cardOffset}, this.cardTransiton, function() {
                 $(this).remove();
             });
-            
+
         var card = this.loadCard(++this.i)
             .appendTo('#main')
             .css({
                 left: cardOffset
             })
             .animate({left: 0}, this.cardTransiton);
-            
+
         $('#footer').text((this.i+1)+' of '+this.data.cards.length);
-        
+
         this.isFrontSideUp = true;
         deck.sayCurrentCard();
     };
-    
+
     this.prev = function() {
         if (this.i <= 0) {
             return;
         }
-        
+
         var cardOffset = ($(window).width() / 2) + 150;
         $('.flashcardWrapper')
             .animate({left: cardOffset}, this.cardTransiton, function() {
                 $(this).remove();
             });
-            
+
         var card = this.loadCard(--this.i)
             .appendTo('#main')
             .css({
                 left: -cardOffset
             })
             .animate({left: 0}, this.cardTransiton);
-            
+
         $('#footer').text((this.i+1)+' of '+this.data.cards.length);
-        
+
         this.isFrontSideUp = true;
         deck.sayCurrentCard();
     };
-    
+
     this.flipCard = function() {
         this.isFrontSideUp = !this.isFrontSideUp;
         deck.sayCurrentCard();
@@ -117,7 +117,7 @@ var Deck = function(data) {
             $('.flashcard').quickFlipper();
         }
     };
-    
+
     this.sayCurrentCard = function() {
         if (!soundManagerLoaded) {
             return;
@@ -125,11 +125,11 @@ var Deck = function(data) {
         var side = this.isFrontSideUp ? 0 : 1;
         var lang = this.isFrontSideUp ? this.data.fromCode : this.data.toCode;
         var word = this.data.cards[this.i][side];
-        
+
         if (!word) {
             return;
         }
-        
+
         var hash = hex_sha1(word+'####'+lang);
         var soundObj = soundManager.createSound({
             id: hash,
@@ -149,7 +149,7 @@ function setup() {
         .live('click', function() {
              deck.flipCard();
          });
-	
+
 	$('#newDeckLink').bind('click', function(e) {
 	    e.preventDefault();
 	    $(this).hide();
@@ -165,10 +165,10 @@ function setup() {
                 $('#newDeckForm textarea').focus();
             });
 	});
-	
+
 	$('#newDeckForm input[type="submit"]').live('click', function(e) {
 	    e.preventDefault();
-	    
+
 	    var words = $('#newDeckForm textarea').val(),
 	        fromSelect = $('#newDeckForm select[name="from"]'),
 	        toSelect = $('#newDeckForm select[name="to"]'),
@@ -182,7 +182,7 @@ function setup() {
 	    $.each(words, function(i, v) {
 	        var d = $.ajax({
 	           dataType: 'jsonp',
-	           url: 'https://www.googleapis.com/language/translate/v2?key=AIzaSyALwGh1LjXU3nLhrVFqc0bGzPTp9_BTW4o&source='+encodeURIComponent(fromCode)+'&target='+encodeURIComponent(toCode)+'&q='+encodeURIComponent(v),
+	           url: 'https://www.googleapis.com/language/translate/v2?key=AIzaSyCXZPVIG5OpDxBP_v9aJvj3bx2q-9Vo-zE&source='+encodeURIComponent(fromCode)+'&target='+encodeURIComponent(toCode)+'&q='+encodeURIComponent(v),
 	           success: function(trans) {
 	               var translatedWord;
 	               if (trans && trans.data && trans.data.translations && trans.data.translations[0] && trans.data.translations[0].translatedText) {
@@ -190,7 +190,7 @@ function setup() {
 	               } else {
 	                  translatedWord = null;
 	               }
-	               cards[i] = [v, translatedWord];	               
+	               cards[i] = [v, translatedWord];
 	           }
 	        });
 	        ajaxReqs.push(d);
@@ -205,7 +205,7 @@ function setup() {
                     cards: cards
                 });
                 deck.setup();
-                
+
                 $('#newDeckLink').show();
         	    $('#keys').show();
         	    $('#newDeckForm').hide();
@@ -213,9 +213,9 @@ function setup() {
             .fail(function() {
                 alert('One or more words failed to translate.');
             });
-	    
+
 	});
-	
+
 	// Setup keyboard control
 	$(document)
 	    .bind('keydown', 'space', function (e) {
@@ -242,7 +242,7 @@ function setup() {
         deck.flipCard();
         e.preventDefault();
     });
-    
+
     // Swipe for iPad
     $('body').touchwipe({
         wipeLeft: function() {
