@@ -1,2 +1,10 @@
 .DS_Store
 static/tts/*.mp3
+
+# Don't commit any of pip/virtualenv's folders
+build/
+include/
+lib/
+local/
+src/
+bin/
