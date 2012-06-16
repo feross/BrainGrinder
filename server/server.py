@@ -13,7 +13,6 @@ import tornado.ioloop
 import tornado.web
 import tornado.auth
 import bcrypt
-import Image
 import urllib2
 import hashlib
 
