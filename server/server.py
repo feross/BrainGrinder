@@ -68,7 +68,7 @@ class TTSHandler(HandlerBase):
         if response.error: raise tornado.web.HTTPError(500)
         filename = hashlib.sha1(self.q.encode('utf-8')+'####'+self.tl.encode('utf-8')).hexdigest()
 
-        fileObj = open(os.path.join(os.path.dirname(__file__), "../static/tts/"+filename+".mp3"), "w")
+        fileObj = open(os.path.join(os.path.dirname(__file__), "static/tts/"+filename+".mp3"), "w")
         fileObj.write(response.body)
         fileObj.close()
 
