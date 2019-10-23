@@ -1,0 +1,7 @@
+{
+  "name": "braingrinder.com",
+  "version": "0.0.0",
+  "scripts": {
+    "deploy": "git push && echo 'Will be updated next time feross.org is deployed'"
+  }
+}
